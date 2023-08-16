@@ -18,8 +18,8 @@ simGBM <- function(S0, mu, sigma, T, numSteps, numRepl){
 set.seed(12345)
 S0 <- 40
 mu <- 0.25
-sigma1 <- 0.1
-sigma2 <- 0.4
+sigma1 <- 0.3
+sigma2 <- 0.5
 T <- 1
 numSteps <- 50
 numRepl <- 10
@@ -31,9 +31,9 @@ labx <- bquote(italic(t))
 laby <- bquote(italic(S(t)))
 par(mfrow = c(1,2))
 plot(Paths1[1,], type='l', ylab=laby, xlab=labx,
-     main='Vol. 10%', ylim = c(minval, maxval))
+     main='Vol. 30%', ylim = c(minval, maxval))
 for (k in 2:10) lines(Paths1[k,])
 plot(Paths2[1,], type='l', ylab=laby, xlab=labx,
-     main="vol. 40%", ylim=c(minval,maxval))
+     main="vol. 50%", ylim=c(minval,maxval))
 for (k in 2:10) lines(Paths2[k,])
 par(mfrow = c(1,1))
